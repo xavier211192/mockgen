@@ -354,8 +354,8 @@ def main():
         <p>Generate realistic test data using advanced AI models</p>
         <div style="margin-top: 1.5rem; padding: 1rem; background: #f3f4f6; border-radius: 8px;">
         <p style="margin: 0; font-weight: 500; color: #374151;">
-            💬 <a href="https://forms.gle/pfGWBnDffyoW6tRN9" target="_blank" style="color: #667eea; text-decoration: none;">
-            This is a prototype, Share your feedback in our quick 2-minute survey
+            <a href="https://forms.gle/pfGWBnDffyoW6tRN9" target="_blank" style="color: #667eea; text-decoration: none;">
+            🔬 Testing prototype - Need your input for official launch! Share your feedback in our quick 2-minute survey
             </a>
         </p>
     </div>        
@@ -665,6 +665,7 @@ def main():
     <div class="footer">
         <h3>🎲 Mock Data Generator Prototype Only</h3>
         <p>Powered by Groq for realistic data generation</p>
+        <p>Choose between OpenAI and HuggingFace models in the future edition</p>
         </p>
     </div>
     """, unsafe_allow_html=True)
