@@ -180,11 +180,26 @@ st.markdown("""
     /* Section headers */
     .section-header {
         font-size: 1.25rem;
-        font-weight: 600;
-        color: #1f2937;
+        font-weight: 700;
+        color: #4f46e5;
         margin: 1.5rem 0 1rem 0;
         padding-bottom: 0.5rem;
-        border-bottom: 2px solid #e5e7eb;
+        border-bottom: 2px solid #4f46e5;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Mobile optimizations for section headers */
+    @media (max-width: 768px) {
+        .section-header {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #4338ca;
+            padding: 0.75rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 8px;
+            border-bottom: 3px solid #4338ca;
+            box-shadow: 0 2px 8px rgba(67, 56, 202, 0.15);
+        }
     }
     
     /* Footer styling */
@@ -352,6 +367,9 @@ def main():
     <div class="main-header">
         <h1>🎲 AI Mock Data Generator</h1>
         <p>Generate realistic test data using advanced AI models</p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">
+            💻 For best experience, open on desktop
+        </p>
         <div style="margin-top: 1.5rem; padding: 1rem; background: #f3f4f6; border-radius: 8px;">
         <p style="margin: 0; font-weight: 500; color: #374151;">
             <a href="https://forms.gle/pfGWBnDffyoW6tRN9" target="_blank" style="color: #667eea; text-decoration: none;">
@@ -368,9 +386,10 @@ def main():
     if not api_key:
         st.stop()
     
-    # Sidebar
+    # Sidebar - Note: If closed, refresh the page to reopen
     with st.sidebar:
         st.markdown("### ⚙️ Generation Settings")
+        st.info("💡 If this sidebar closes, refresh the page to reopen it")
         
         # Model selection
         model = st.selectbox(
