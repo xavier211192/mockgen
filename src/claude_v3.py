@@ -66,12 +66,49 @@ st.markdown("""
     
     /* Card styling */
     .card {
-        background: white;
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        color: white;
         border-radius: 10px;
         padding: 1.5rem;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-        border: 1px solid #e5e7eb;
+        box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+        border: 1px solid #6366f1;
         margin-bottom: 1.5rem;
+    }
+    
+    .card h4 {
+        color: white;
+        margin: 0 0 1rem 0;
+        font-weight: 600;
+    }
+    
+    .card p {
+        color: rgba(255, 255, 255, 0.95);
+        margin: 0.5rem 0;
+    }
+    
+    .card em {
+        color: rgba(255, 255, 255, 0.9);
+        font-style: italic;
+    }
+    
+    /* Mobile optimization for cards */
+    @media (max-width: 768px) {
+        .card {
+            background: linear-gradient(135deg, #3730a3 0%, #6b21a8 100%);
+            padding: 1.25rem;
+            box-shadow: 0 6px 20px rgba(55, 48, 163, 0.4);
+            border: 2px solid #4f46e5;
+        }
+        
+        .card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
     }
     
     /* Sidebar styling */
@@ -204,13 +241,49 @@ st.markdown("""
     
     /* Footer styling */
     .footer {
-        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+        color: white;
         border-radius: 12px;
         padding: 2rem;
         text-align: center;
         margin-top: 3rem;
-        border: 1px solid #e5e7eb;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+        border: 1px solid #4b5563;
+        box-shadow: 0 4px 15px rgba(31, 41, 55, 0.3);
+    }
+    
+    .footer h3 {
+        color: white;
+        margin: 0 0 1rem 0;
+        font-weight: 600;
+    }
+    
+    .footer p {
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0.5rem 0;
+        line-height: 1.6;
+    }
+    
+    /* Mobile optimization for footer */
+    @media (max-width: 768px) {
+        .footer {
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border: 2px solid #374151;
+            box-shadow: 0 6px 20px rgba(17, 24, 39, 0.4);
+        }
+        
+        .footer h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .footer p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.95);
+        }
     }
     
     /* Hide default streamlit elements */
